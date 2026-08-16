@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Суши Раннер — доставка суши, роллов и пиццы, д. Патрушева, Ново Комарово, Тюменский район</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <div class="brand">
+      <img class="brand__logo" src="images/logo-header.png" alt="Суши Раннер">
+    </div>
+    <div class="header__contacts">
+      <a href="tel:+79504858786" class="header__phone">+7 950 485-87-86</a>
+      <div class="header__address">ул. Петра Ершова, 10, д. Патрушева, Ново Комарово, Тюменский район</div>
+      <div class="header__hours">11:00–23:00, вторник — выходной</div>
+    </div>
+    <button class="cart-btn" id="cartOpenBtn">
+      🛒 Корзина <span class="cart-btn__count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__glow"></div>
+  <div class="container hero__inner">
+    <span class="hero__badge">Работаем с 11:00 до 23:00 · вторник — выходной</span>
+    <h1>Суши Раннер — ресторан доставки японской кухни<br>Доставка в д. Патрушева, Ново Комарово, Тюменский район</h1>
+    <p>Готовим с душой, привозим быстро. Оплата наличными или картой курьеру</p>
+    <a href="#menu" class="hero__cta">Смотреть меню ↓</a>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee__track">
+    <span class="marquee__item">🍣 У нас вкусные не только суши, но и цены</span>
+    <span class="marquee__item">🚚 Доставка в д. Патрушева, Ново Комарово, Тюменский район</span>
+    <span class="marquee__item">🍕 Роллы, сеты и пицца в одном заказе</span>
+    <span class="marquee__item">🍣 У нас вкусные не только суши, но и цены</span>
+    <span class="marquee__item">🚚 Доставка в д. Патрушева, Ново Комарово, Тюменский район</span>
+    <span class="marquee__item">🍕 Роллы, сеты и пицца в одном заказе</span>
+  </div>
+</div>
+
+<nav class="categories" id="categoryNav"></nav>
+
+<main class="container" id="menu"></main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div><strong>Суши Раннер</strong></div>
+    <div>ул. Петра Ершова, 10, д. Патрушева, Ново Комарово, Тюменский район, Тюменская область, 625062</div>
+    <div>Телефон: <a href="tel:+79504858786">+7 950 485-87-86</a></div>
+    <div>Часы работы: 11:00–23:00, вторник — выходной</div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer__header">
+    <h2>Ваш заказ</h2>
+    <button class="cart-close" id="cartCloseBtn">✕</button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-empty" id="cartEmpty">Корзина пуста — добавьте блюда из меню</div>
+
+  <div class="cart-summary" id="cartSummary">
+    <div class="cart-summary__row">
+      <span>Сумма заказа</span>
+      <span id="cartTotal">0 ₽</span>
+    </div>
+
+    <form id="orderForm" class="order-form">
+      <label>Имя
+        <input type="text" name="name" required placeholder="Как к вам обращаться">
+      </label>
+      <label>Телефон
+        <input type="tel" name="phone" required placeholder="+7 900 000-00-00">
+      </label>
+
+      <div class="order-form__toggle">
+        <label class="radio"><input type="radio" name="delivery" value="delivery" checked> Доставка</label>
+        <label class="radio"><input type="radio" name="delivery" value="pickup"> Самовывоз</label>
+      </div>
+
+      <label id="addressLabel">Адрес доставки
+        <input type="text" name="address" required placeholder="Улица, дом, квартира/подъезд">
+      </label>
+
+      <label>Комментарий к заказу
+        <textarea name="comment" rows="2" placeholder="Например: код домофона, без васаби и т.п."></textarea>
+      </label>
+
+      <div class="order-form__hint">Способ оплаты</div>
+      <div class="order-form__toggle">
+        <label class="radio"><input type="radio" name="payment" value="cash" checked> Наличными</label>
+        <label class="radio"><input type="radio" name="payment" value="card"> Картой</label>
+      </div>
+
+      <div class="order-form__hint">Оплата курьеру / в заведении. Отправьте заказ в MAX:</div>
+
+      <div class="send-buttons">
+        <button type="button" class="send-btn send-btn--max" data-channel="max">
+          Отправить в MAX
+        </button>
+      </div>
+    </form>
+  </div>
+</aside>
+
+<button class="mobile-cart-btn" id="mobileCartBtn">
+  🛒 Корзина · <span id="mobileCartTotal">0 ₽</span>
+</button>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
