@@ -78,7 +78,7 @@ function renderMenu() {
         : `<button class="add-btn" data-action="add" data-id="${item.id}">Добавить</button>`;
 
       const photoHtml = item.img
-        ? `<img src="${item.img}" alt="${item.name}" loading="lazy">`
+        ? `<img src="${item.img}" alt="${item.name}" loading="lazy" class="zoomable" data-action="zoom" data-id="${item.id}">`
         : item.emoji;
 
       card.innerHTML = `
@@ -106,9 +106,37 @@ function renderMenu() {
       const action = btn.dataset.action;
       if (action === "add" || action === "inc") addToCart(id);
       if (action === "dec") changeQty(id, -1);
+      if (action === "zoom") openLightbox(id);
     });
   });
 }
+
+// ====== ЛАЙТБОКС (УВЕЛИЧЕНИЕ ФОТО) ======
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImg");
+const lightboxCaption = document.getElementById("lightboxCaption");
+
+function openLightbox(id) {
+  const item = findItemById(id);
+  if (!item || !item.img) return;
+  lightboxImg.src = item.img;
+  lightboxImg.alt = item.name;
+  lightboxCaption.textContent = item.desc ? `${item.name} — ${item.desc}` : item.name;
+  lightbox.classList.add("open");
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+}
+
+lightbox.addEventListener("click", closeLightbox);
+document.getElementById("lightboxClose").addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeLightbox();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLightbox();
+});
 
 // ====== РЕНДЕР КОРЗИНЫ ======
 function renderCart() {
