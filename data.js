@@ -4,20 +4,14 @@ const MENU = [
   {
     category: "Роллы",
     items: [
-      { id: "r1", name: "Ролл чиканок", weight: "240 г", price: 500, desc: "Курица, огурец, творожный сыр, сливочный и спайси соус", img: "images/chikanok.jpg" },
       { id: "r2", name: "Ролл Бонито", weight: "—", price: 550, desc: "Лосось, огурец, стружка тунца, творожный сыр", img: "images/bonito.jpg" },
-      { id: "r3", name: "Эби лайт", weight: "250 г", price: 590, desc: "Лосось, творожный сыр, икра масаго, огурец, тигровая креветка, кисло-сладкий соус", img: "images/ebi-light.jpg" },
-      { id: "r4", name: "Ролл ассорти с креветкой и мидией", weight: "250 г", price: 530, desc: "Творожный сыр, лосось, огурец, спайси соус, кисло-сладкий соус", img: "images/assorti-shrimp-mussel.jpg" },
-      { id: "r5", name: "Ролл хорека", weight: "320 г", price: 650, desc: "Творожный сыр, угорь, огурец, икра масаго", img: "images/horeka.jpg" },
-      { id: "r6", name: "Бургер ролл", weight: "350 г", price: 490, desc: "Лосось, сыр творожный, лист салата, огурец, соус терияки, соус спайси", img: "images/burger-roll.jpg" }
+      { id: "r3", name: "Эби лайт", weight: "250 г", price: 590, desc: "Лосось, творожный сыр, икра масаго, огурец, тигровая креветка, кисло-сладкий соус", img: "images/ebi-light.jpg" }
     ]
   },
   {
     category: "Сеты",
     items: [
-      { id: "s1", name: "Сет Маки", weight: "—", price: 900, desc: "Лосось, креветка, краб, огурец", img: "images/set-maki.jpg" },
       { id: "s2", name: "Сет Калифорния", weight: "750 г", price: 1500, desc: "Калифорния с лососем, калифорния с креветкой, калифорния с крабом", img: "images/set-california.jpg" },
-      { id: "s3", name: "Сет Сингапур", weight: "1200 г", price: 2150, desc: "Калифорния с креветкой, ролл ассорти, запечённый с креветками, ролл хорека", img: "images/set-singapore.jpg" },
       { id: "s4", name: "Сет тар-тар", weight: "1 кг", price: 2000, desc: "Ролл тар-тар с креветкой, ролл тар-тар с лососем, ролл тар-тар с угрём", img: "images/set-tartar.jpg" },
       { id: "s5", name: "Сет на четверых", weight: "2 кг", price: 3000, desc: "Калифорния с лососем, лава с лососем, Филадельфия Лайт, темпура с курицей, эби маки, запечённый с угрём", img: "images/set-na-chetveryh.jpg" },
       { id: "s6", name: "Сет любимая", weight: "1100 г", price: 1999, desc: "Филка, калифорния с креветкой, лава лосось, сяки маки лава", img: "images/set-lyubimaya.jpg" },
