@@ -200,7 +200,7 @@ body {
 }
 
 .dish-photo {
-  padding-top: 75%; /* 4:3 box via padding-hack — works in webviews without aspect-ratio support */
+  aspect-ratio: 4 / 3;
   background: #efe9e0;
   display: flex;
   align-items: center;
@@ -210,11 +210,9 @@ body {
   overflow: hidden;
 }
 .dish-photo img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .dish-photo img.zoomable { cursor: zoom-in; }
@@ -360,14 +358,10 @@ body {
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: block;
 }
 .send-btn--wa { background: #25D366; }
 .send-btn--tg { background: #29A9EA; }
 .send-btn--max { background: #6C5CE7; }
-.send-btn--call { background: var(--accent); }
 .send-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* Mobile cart button */

@@ -256,7 +256,7 @@ function validateForm() {
   return true;
 }
 
-document.querySelectorAll(".send-btn[data-channel]").forEach(btn => {
+document.querySelectorAll(".send-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     if (!validateForm()) return;
     const text = buildOrderText();
@@ -267,25 +267,6 @@ document.querySelectorAll(".send-btn[data-channel]").forEach(btn => {
       alert("Не удалось скопировать автоматически. Текст заказа:\n\n" + text);
     });
   });
-});
-
-// ====== ЗАКАЗ ПО ЗВОНКУ ======
-function buildCallSummary() {
-  let text = "Хочу заказать:\n";
-  Object.values(cart).forEach(({ item, qty }) => {
-    text += `• ${item.name} × ${qty} — ${item.price * qty} ₽\n`;
-  });
-  text += `\nИтого: ${cartTotal()} ₽`;
-  return text;
-}
-
-document.getElementById("callOrderBtn").addEventListener("click", (e) => {
-  if (cartCount() === 0) {
-    e.preventDefault();
-    alert("Корзина пуста — добавьте блюда из меню, чтобы продиктовать заказ по телефону");
-    return;
-  }
-  navigator.clipboard.writeText(buildCallSummary()).catch(() => {});
 });
 
 // ====== СТАРТ ======
