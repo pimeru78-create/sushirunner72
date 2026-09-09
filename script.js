@@ -1,6 +1,7 @@
 // ====== НАСТРОЙКИ ======
 const CONFIG = {
-  maxPhone: "79504858786"
+  maxPhone: "79504858786",
+  maxChatUrl: "https://max.ru/u/f9LHodD0cOIyV6_WqtaiJGiMDx-qXwkSMbn7ebMdlMWl2eGzOk8WztJqZN0"
 };
 
 // ====== СОСТОЯНИЕ КОРЗИНЫ ======
@@ -262,9 +263,11 @@ document.querySelectorAll(".send-btn[data-channel]").forEach(btn => {
     const text = buildOrderText();
 
     navigator.clipboard.writeText(text).then(() => {
-      alert("Текст заказа скопирован. Откройте MAX и отправьте его в чат заведения.");
+      alert("Текст заказа скопирован. Сейчас откроется чат с нами в MAX — вставьте текст и отправьте его.");
     }).catch(() => {
-      alert("Не удалось скопировать автоматически. Текст заказа:\n\n" + text);
+      alert("Не удалось скопировать автоматически. Текст заказа:\n\n" + text + "\n\nСейчас откроется чат с нами в MAX — вставьте текст вручную.");
+    }).finally(() => {
+      window.location.href = CONFIG.maxChatUrl;
     });
   });
 });
