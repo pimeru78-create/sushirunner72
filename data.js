@@ -39,8 +39,7 @@ const MENU = [
   {
     category: "Супы и закуски",
     items: [
-      { id: "f4", name: "Жаренный сэндвич с лососем", weight: "230 г", price: 250, desc: "Лосось, темпура, соус", img: "images/sandwich-salmon.jpg" },
-      { id: "f5", name: "Твистер", weight: "250 г", price: 290, desc: "Куриные стрипсы, помидор, лист салата, творожный сыр, спайси соус", img: "images/twister.jpg" }
+      { id: "f4", name: "Жаренный сэндвич с лососем", weight: "230 г", price: 250, desc: "Лосось, темпура, соус", img: "images/sandwich-salmon.jpg" }
     ]
   }
 ];
