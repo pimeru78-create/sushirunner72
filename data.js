@@ -49,7 +49,7 @@ const MENU = [
     ]
   },
   {
-    category: "Супы и закуски",
+    category: "Закуски",
     items: [
       { id: "f1", name: "Сет Фришка", weight: "450 г", price: 690, desc: "Луковые кольца, наггетсы, картофель фри", img: "images/set-frishka.jpg" },
       { id: "f4", name: "Жареный сэндвич", weight: "230 г", price: 250, desc: "С крабом", img: "images/sandwich-crab.jpg" },
