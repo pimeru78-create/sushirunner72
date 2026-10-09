@@ -5,7 +5,6 @@ const MENU = [
     category: "Роллы",
     items: [
       { id: "r2", name: "Ролл Бонито", weight: "—", price: 550, desc: "Лосось, огурец, стружка тунца, творожный сыр", img: "images/bonito.jpg" },
-      { id: "r3", name: "Эби лайт", weight: "250 г", price: 590, desc: "Лосось, творожный сыр, икра масаго, огурец, тигровая креветка, кисло-сладкий соус", img: "images/ebi-light.jpg" },
       { id: "r7", name: "Филка", weight: "250 г", price: 500, desc: "Лосось, рис, творожный сыр", img: "images/filka.jpg" },
       { id: "r8", name: "Филадельфия Лайт", weight: "330 г", price: 850, desc: "Лосось, огурец, творожный сыр", img: "images/philadelphia-light.jpg" },
       { id: "r9", name: "Запечённый с лососем", weight: "380 г", price: 550, desc: "Рис, нори, лосось, творожный сыр, соус, кунжут", img: "images/baked-salmon.jpg" },
