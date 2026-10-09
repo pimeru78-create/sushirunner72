@@ -49,12 +49,6 @@ const MENU = [
     ]
   },
   {
-    category: "Пицца",
-    items: [
-      { id: "p1", name: "Пицца «Мясная»", weight: "—", price: 1500, desc: "Томатный соус, фарш говядина, помидоры, красный лук, болгарский перец, моцарелла", img: "images/meat-pizza.jpg" }
-    ]
-  },
-  {
     category: "Супы и закуски",
     items: [
       { id: "f1", name: "Сет Фришка", weight: "450 г", price: 690, desc: "Луковые кольца, наггетсы, картофель фри", img: "images/set-frishka.jpg" },
